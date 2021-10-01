@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  
+      <h5 class="navbar-brand">Welcome {{data}} UserName <button class="btn btn-outline-danger btn-sm" id="scearchbtn" type="submit">LOGOUT</button></h5>
+    BASIC RANDOM TEXT ABOUT OUR WEBAPP WILL BE MENTIONED HERE.
+      <div class="row">
+      <div class="col-3">
+        <table>
+          <hr>
+          <tr><button class="btn btn-primary custom" (click)="togglebtn = '1'"> Your Previous Bookings </button></tr>
+          <hr>
+          <tr><button class="btn btn-primary custom" (click)="togglebtn = '2'"> Change Password </button></tr>
+          <hr>
+          <tr><button class="btn btn-primary custom" (click)="togglebtn = '3'"> Your Profile </button></tr>
+          <hr>
+          <!--<tr><button class="btn btn-primary custom" routerLink="wallet"> Wallet </button></tr>
+          
+          
+        
+        -->
+      </table>
+      </div>
+      <div class="col-9" [ngSwitch]="togglebtn">
+        <div *ngSwitchCase="'1'" (ngSubmit)=gototrans()><app-bookings></app-bookings></div>
+        <div *ngSwitchCase="'2'" (ngSubmit)=gotochngpswd()><app-chngpswd></app-chngpswd></div>
+        <div *ngSwitchCase="'3'" (ngSubmit)=gotoprofile()><app-profile></app-profile></div>
+    </div>
+  </div>
+  

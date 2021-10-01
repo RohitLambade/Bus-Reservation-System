@@ -1,0 +1,33 @@
+<p>chngpswd works!</p>
+<div class="container bootstrap snippets bootdey">
+    <div class="row">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Change password   
+                    </h3>
+                </div>
+            <form #updateForm="ngForm" (ngSubmit)=updatePassword() novalidate>
+                <div class="panel-body">
+                    <div class="row">
+                        <div style="margin-top:80px;" class="col-xs-6 col-sm-6 col-md-6 login-box">
+                            <div class="form-group">
+                                Enter Username :-
+                                <input name = "Username" class="form-control" type="text" placeholder="Username" [(ngModel)]="Username">
+                            </div>
+                          <div class="form-group">
+                              Enter New Password :-
+                              <input name = "Password" class="form-control" type="password" placeholder="New Password" [(ngModel)]="Password">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <button [disabled]="!updateForm.valid" class="btn icon-btn-save btn-success" type="submit">SAVE</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+    </div>
+</div>

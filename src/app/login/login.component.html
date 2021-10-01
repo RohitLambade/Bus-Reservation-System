@@ -1,0 +1,11 @@
+<p>login works!</p>
+<form #loginForm="ngForm" class="myform" (ngSubmit)=checkLogin() novalidate>
+<div class="col-13">
+    <table align="center">
+    <tr><td>Login Username</td> <td><input type="text" name="uname" value="name" [(ngModel)]="uname"></td></tr>
+    <tr><td>Password </td><td><input type="password" name="pswd" value="pswd" [(ngModel)]="pswd"></td></tr>
+    <button class="btn btn-primary custom btn-success" type="submit"> Click Here to Login </button>
+    <tr><td><p><u><i>not a member?</i></u></p></td><td><button class="btn btn-primary custom btn-danger" (click)="goto()"> SIGN UP TO THE PORTAL </button></td> </tr>
+    </table>
+    </div>
+</form>
