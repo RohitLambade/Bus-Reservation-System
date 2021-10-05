@@ -1,0 +1,29 @@
+
+<h1 align="center">YOUR TICKET</h1>
+
+<div class="container">
+<div id="print-section">
+	<table class="table table-bordered">
+        <th>Transaction ID</th><th>Bus ID</th><th>Bus Name</th><th>From</th><th>To</th><th>Total Cost</th>
+        <th>seat No</th>
+        <tr >
+            <td>{{trans.trans_id}}</td>
+            <td>{{schedulePDF.busid.busid}}</td>
+            <td>{{schedulePDF.busid.busname}}</td>
+            <td>{{schedulePDF.busid.source}}</td>
+            <td>{{schedulePDF.busid.destination}}</td>
+            <td>{{totalCost}}</td>
+            <td>{{seatnos}}</td>
+            
+        </tr>
+    </table>
+</div>
+
+<button class="btn btn-warning my-2 my-sm-0" printTitle="Print Title" printSectionId="print-section" ngxPrint>
+  Print
+</button>
+&nbsp;
+<button (click)="gotoHome()" class="btn btn-success my-2 my-sm-0">
+  Home Button
+</button>
+</div>

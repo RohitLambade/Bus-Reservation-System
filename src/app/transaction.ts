@@ -1,10 +1,15 @@
+import { Bus } from "./bus";
+import { Member } from "./member";
+import { Schedule } from "./schedule";
+
 export class Transaction {
-    transid:number|any;
-    reguserid:String|any;
-    source:String|any;
-    destination:String|any;
-    cost:number|any;
-    canc_status:String|any;
-    dateOfPayment:String|any;
+    trans_id:number|any;
+    reg_id:number|any;
+    unreg_id:number|any;
+    total_cost:number|any;
+    cancelled_status:String|any;
+    dateOfBooking:Date|any;
+    schedule:Schedule|any;
+    bus_id:Bus|any;
 
 }

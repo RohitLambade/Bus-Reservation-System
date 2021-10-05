@@ -1,0 +1,31 @@
+
+<form #busform="ngForm" (ngSubmit)="saveBus(busform)" novalidate>
+    <table>
+        <tr>
+      <td><label for="busid">Bus Id</label></td>
+      <td><input type="text" class="form-control" id="busid"  name="busid" placeholder="Enter BUS ID" ngModel required> </td>
+    </tr>
+    <tr>
+        <td> <label for="busname">BUS NAME</label></td>
+      <td><input type="text" class="form-control" id="busname" name="busname" placeholder="Enter Bus name" ngModel required></td>
+    </tr>
+    <tr>
+        <td><label for="source">Source</label></td>
+        <td><input type="text" class="form-control" id="source" name="source" placeholder="Enter Source" ngModel requird></td>
+    </tr>
+
+    <tr>
+        <td><label for="destination">Destination</label></td>
+        <td><input type="text" class="form-control" id="destination" name="destination"  placeholder="Enter Destination" ngModel requird></td>
+    </tr>
+    
+    <tr>
+        <td><label for="cost">Cost</label></td>
+        <td><input type="number" class="form-control" id="cost" name="cost"  placeholder="Enter Cost" ngModel requird></td>
+    </tr>
+    <tr>
+        <td></td>
+    <td><button type="submit" class="btn btn-outline-dark-sm" [disabled]="!busform.valid">Submit</button></td>
+</tr>
+</table>
+  </form>

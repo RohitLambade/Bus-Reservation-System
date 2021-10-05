@@ -34,6 +34,7 @@ export class ChngpswdComponent implements OnInit {
     (
       (data)=>{
         if(data)
+        this.router.navigate(['']);//<<<-----navigating to login page
           console.log(data);
       },
       (error)=>{

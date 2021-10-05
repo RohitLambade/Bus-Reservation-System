@@ -1,17 +1,21 @@
-
+<hr>
 <div>
-    <table class="table table-bordered" id="print-me">
-        <thead>
-            <th>Username</th> <th>Email </th> <th>Phone No.</th> <th>Password</th> <th>Money in your wallet</th>
-        </thead>
-        <tbody>
-                <tr>
-                    <td>{{ProfArray.regusername}}</td>
-                    <td>{{ProfArray.regemail}}</td>
-                    <td>{{ProfArray.regphone}}</td>
-                    <td>{{ProfArray.regpassword}}</td>
-                    <td>{{ProfArray.wallet}}</td>
-                </tr>
-        </tbody>
+    <table style="width:500px;"  border="2" class="table table-bordered">
+
+        <tr>
+            <td>Username </td> <td>{{ProfArray.regusername}}</td>
+        </tr>
+        <tr>
+            <td>Email </td> <td>{{ProfArray.regemail}}</td>
+        </tr>
+        <tr>
+            <td>Phone No. </td> <td>{{ProfArray.regphone}}</td>
+        </tr>
+        <tr>
+            <td>Password </td> <td>{{ProfArray.regpassword}}</td>
+        </tr>
+        <tr>
+            <td>Money in your wallet </td> <td>{{ProfArray.wallet}}</td>
+        </tr>
     </table>
 </div>

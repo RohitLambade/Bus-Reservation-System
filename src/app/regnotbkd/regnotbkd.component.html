@@ -1,0 +1,17 @@
+<table class="table table-bordered">
+    <thead>
+        <th>USER ID</th> <th>USER NAME </th> <th>EMAIL</th><th>PHONE</th> <th>WALLET</th>
+    </thead>
+    <tbody>
+            <tr *ngFor="let b of regArray">
+                    <td>{{ b.reguserid}}</td>
+                    <td>{{ b.regusername}}</td>
+                    <td>{{ b.regemail}}</td>
+                    <td>{{ b.regphone}}</td>
+                    <td>{{ b.wallet}}</td>
+                    <!--<td> <a [routerLink]="['/updatevehicle',v.vehicleNo]" class="btn btn-warning">Edit</a>
+                         <a href="#" class="btn btn-danger">Delete </a>
+                    </td>-->
+            </tr>
+    </tbody>
+</table>

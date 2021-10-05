@@ -1,0 +1,53 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <h5 class="navbar-brand" >Welcome Admin</h5>
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+        </li>
+        
+        <li class="nav-item">
+          <button class="btn btn-outline-dark" (click)="togglebtn = '1'"> See Buses </button>
+        </li>&nbsp;
+        <li class="nav-item">
+          <button class="btn btn-outline-dark" (click)="togglebtn = '2'"> See Schedules </button>
+        </li>&nbsp;
+       <li class="nav-item">
+          <button class="btn btn-outline-dark" (click)="togglebtn = '3'"> Add/Modify Bus </button>
+        </li>&nbsp;
+        <li class="nav-item">
+          <button class="btn btn-outline-dark" (click)="togglebtn = '4'"> Add/Modify Schedule </button>
+        </li>&nbsp;
+  
+        <li class="nav-item">
+          <button class="btn btn-outline-dark" (click)="gotologin()"> Log Out </button>
+        </li>
+  
+      </ul>
+  </nav> 
+  <hr>
+  <div class="row">
+    <div class="col-3">
+      <table>
+        <tr><button class="btn btn-dark btn-sm" (click)="togglebtn = '5'"> Frequently Travlled Routes </button></tr>
+        <br>
+        <tr><button class="btn btn-dark btn-sm" (click)="togglebtn = '6'"> Last Month Record And Profit</button></tr>
+        <br>
+        <!--<tr><button class="btn btn-dark btn-sm" routerLink="changepswd"> Most preferred type of buses</button></tr>
+        <br>-->
+        <tr><button class="btn btn-dark btn-sm" (click)="togglebtn = '7'"> Registered But Not Booked </button></tr>
+        <br>
+        <tr><button class="btn btn-dark btn-sm" (click)="togglebtn = '8'"> Reservation Details Of Customer </button></tr>
+    </table>
+    
+    </div>
+    <div class="col-9" [ngSwitch]="togglebtn">
+      <div *ngSwitchCase="'1'"><app-getbus></app-getbus></div>
+      <div *ngSwitchCase="'2'"><app-getschedule></app-getschedule> </div>
+      <div *ngSwitchCase="'3'"><app-chngbus></app-chngbus> </div>
+      <div *ngSwitchCase="'4'"><app-chngsched></app-chngsched> </div>
+      <div *ngSwitchCase="'5'"><app-freqroutes></app-freqroutes> </div>
+      <div *ngSwitchCase="'6'"><app-lastmnthrec></app-lastmnthrec> </div>
+      <div *ngSwitchCase="'7'"><app-regnotbkd></app-regnotbkd> </div>
+      <div *ngSwitchCase="'8'"><app-resdetails></app-resdetails> </div>
+  </div>
+  </div>

@@ -1,50 +1,24 @@
-bookings work!!
-Print pdf temporary task is mentioned here!!!!!
-1.pdf
-<br>
-<br>
-  
 
-<table class="table table-bordered" id="print-me">
-    <thead>
-        <th>Transaction ID</th> <th>Source </th> <th>Destination</th> <th>Cost</th> <th>Date of Payment</th> <th>Cancellation Status</th>
-    </thead>
-    <tbody>
-            <tr *ngFor="let s of TransArray">
-                    <td>{{ s.transid}}</td>
-                    <td>{{ s.source}}</td>
-                    <td>{{ s.destination}}</td>
-                    <td>{{ s.cost}}</td>
-                    <td>{{ s.dateOfPayment}}</td>
-                    <td>{{ s.canc_status}}</td>
-                    
 
-                    <!--<td> <a [routerLink]="['/updatevehicle',v.vehicleNo]" class="btn btn-warning">Edit</a>
-                         <a href="#" class="btn btn-danger">Delete </a>
-                    </td>-->
-            </tr>
-    </tbody>
-</table>
-
-<br>
-<br>
 <hr>
-<div class="container">
-<table class="table">
-    <tr>UP-COMING BOOKINGS</tr>
-    <tr>
-        <td>From (Binding Here)</td>
-        <td>--->></td>
-        <td>To (Binding Here)</td>
-    </tr>
-</table>
-</div>
-<div class="container">
-    <table>
-        <tr>
-            <td><button class="btn btn-danger"> Cancel Ticket </button></td>
-            <td><button class="btn btn-success" printSectionId="print-me" ngxPrint> Print Ticket </button></td>
-        </tr>
+
+<div class="container" id="print-me">
+    {{ TransArray.transid }}
+    <table bgcolor="#ffe680" class="table table-bordered">
+        <thead>
+            <th>Transaction ID</th> <th>Cost</th> <th>Date of Payment</th> <th>Cancellation Status</th> <th>Bus Id</th> <th>Schedule Id</th>
+        </thead>
+        <tbody>
+                <tr *ngFor="let s of TransArray;let i = index">
+                        <td>{{ s.trans_id}}</td>
+                        <td>{{ TransArray[i].total_cost}}</td>
+                        <td>{{ TransArray[i].dateOfBooking}}</td>
+                        <td>{{ TransArray[i].cancelled_status}}</td>
+                        <td>{{ TransArray[i].bus_id.busid}}</td>
+                        <td>{{ TransArray[i].schedule.schedule_id}}</td>
+
+                </tr>
+        </tbody>
     </table>
+    <button class="btn btn-success" printSectionId="print-me" ngxPrint> Print All your Transactions </button>
 </div>
-<hr>

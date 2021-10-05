@@ -9,12 +9,15 @@
       <input type="text" placeholder="Enter Email" name="regemail" ngModel required>
   
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="regpassword" ngModel required>
+      <br>
+      <p style="color:red;"><i>Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</i></p>
+      <input type="password" placeholder="Enter Password" name="regpassword" ngModel pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
   
       <label for="psw-repeat"><b>Repeat Password</b></label>
       <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
       
       <label for="name"><b>Name</b></label>
+
       <input type="text" placeholder="Enter Full Name" name="regusername" ngModel required>
 
       <label for="number"><b>Phone Number</b></label>
@@ -36,8 +39,9 @@
       <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
   
       <div class="clearfix">
-        <button type="button" class="cancelbtn">Cancel</button> <!--On Cancel it should go to search page.-->
+        <button type="button" class="cancelbtn" (click)="clicked()" >Cancel</button> <!--On Cancel it should go to search page.-->
         <button [disabled]="!signupForm.valid" type="submit" class="signupbtn">Sign Up</button>
       </div>
     </div>
 </form>
+<br><br><br><br>

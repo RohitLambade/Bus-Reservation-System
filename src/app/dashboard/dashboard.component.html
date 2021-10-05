@@ -1,7 +1,12 @@
 <div class="container-fluid">
-  
-      <h5 class="navbar-brand">Welcome {{data}} UserName <button class="btn btn-outline-danger btn-sm" id="scearchbtn" type="submit">LOGOUT</button></h5>
-    BASIC RANDOM TEXT ABOUT OUR WEBAPP WILL BE MENTIONED HERE.
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <h1 class="navbar-brand">Welcome {{data}} </h1>
+    <form class="form-inline">
+      <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" (click)="gotoCheckBusses()" >Check Busses</button>
+      <!--this.router.navigate(['dashboard',this.id.reguserid,this.id.regusername]);-->&nbsp;
+      <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" (click)="gotodashboard()">LOGOUT</button>
+    </form>
+  </nav>
       <div class="row">
       <div class="col-3">
         <table>
@@ -25,4 +30,3 @@
         <div *ngSwitchCase="'3'" (ngSubmit)=gotoprofile()><app-profile></app-profile></div>
     </div>
   </div>
-  

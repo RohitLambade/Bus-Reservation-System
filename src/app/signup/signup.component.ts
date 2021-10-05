@@ -9,28 +9,11 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent implements OnInit {
   member:SignUp
-  //memberArray=new Array <SignUp> ();
-
   data:any;
   pswd:any;
   constructor(private commonservice : CommonServiceService, private router:Router) {
     this.member=new SignUp();
    }
-  //saveData(){
-    //this.data = this.member.name;
-   // this.pswd = this.member.pwd;
-   // console.log(this.member);
-    //this.memberArray.push(this.member);
-    //console.log(this.memberArray);
-   // this.commonservice.sharedData= this.data;
-    //if(this.data == null && this.pswd == null ){
-    //  this.router.navigate(['signup']);
-    //}else{
-      // WRITE CODE HERE TO STORE THE DATA TO DATABASE
-    //  this.router.navigate(['login']);
-   // }
-   // this.member=new SignUp();
-  //}
   ngOnInit(): void {
   }
   addCustomer(signupForm:any){
@@ -52,5 +35,8 @@ export class SignupComponent implements OnInit {
             console.log(error);
         }
       )
+  }
+  clicked(){
+    this.router.navigate(['']);
   }
 }

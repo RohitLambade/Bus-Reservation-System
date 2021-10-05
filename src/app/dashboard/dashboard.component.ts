@@ -10,6 +10,7 @@ import { CommonServiceService } from '../common-service.service';
 export class DashboardComponent implements OnInit {
 
   uname:any;
+  ProfArray:any;
   pswd:any;
   id:any;
   data : any;
@@ -67,5 +68,24 @@ export class DashboardComponent implements OnInit {
             console.log(error);
         }
       )
+  }
+  gotodashboard(){
+    this.router.navigate(['']); //<<<----Navigating to 
+                                //login but has to move to serch page 
+  }
+  gotoCheckBusses(){
+    this.id = this.activeRoute.snapshot.paramMap.get('id');
+    this.commonservice.getMember(this.id).subscribe(
+      (data)=>{
+        this.ProfArray=data;
+        if(data)
+            this.router.navigate(['busdetail',this.ProfArray.reguserid]);
+
+         },
+         (error)=>
+          {
+              console.log(error);
+          }
+    )
   }
 }

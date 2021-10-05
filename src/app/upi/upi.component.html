@@ -1,0 +1,15 @@
+<h3 align="center">Please Enter Your UPI Credentials</h3>
+<form #upiform="ngForm"  (ngSubmit)="saveData(upiform)">
+<table align="center">
+    <tr>
+        <td>UPI ID</td> <input type="text" value="Enter valid upi id" name="UpiId" ngModel required>
+        
+    </tr>
+    
+        <tr>
+        <td>Name</td> <input type="text" value="Enter name" name="Name" ngModel required>
+        </tr>
+        <tr><td><button class="btn btn-outline-danger my-2 my-sm-0" [disabled]="upiform.invalid">SUBMIT</button> </td>
+            </tr>
+</table>
+</form>

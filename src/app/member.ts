@@ -4,4 +4,5 @@ export class Member {
     regemail:String|undefined;
     regphone:String|undefined;
     regpassword:String|undefined;
+    regwallet:String|undefined;
 }

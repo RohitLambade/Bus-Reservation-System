@@ -1,0 +1,12 @@
+<table class="table table-bordered table table-striped">
+    <thead>
+        <th>Schedule ID</th> <th>BUS ID </th> <th>Date</th> 
+    </thead>
+    <tbody>
+            <tr *ngFor="let s of scheduleArray">
+                    <td>{{ s.schedule_id}}</td>
+                    <td>{{ s.busid.busid}}</td>
+                    <td>{{ s.date_Of_Jrny}}</td>
+            </tr>
+    </tbody>
+</table>

@@ -1,0 +1,16 @@
+
+<table class="table table-striped">
+    <thead >
+        <th>BUS ID</th> <th>BUS NAME </th> <th>COST</th>  <th>SOURCE</th> <th>DESTINATION</th>
+    </thead>
+    <tbody>
+            <tr *ngFor="let b of busArray">
+                    <td>{{ b.busid}}</td>
+                    <td>{{ b.busname}}</td>
+                    <td>{{ b.cost}}</td>
+                    <td>{{ b.source}}</td>
+                    <td>{{ b.destination}}</td>
+                    <!--<button (click)="delete(b.busid)" class="btn btn-dark">delete</button> -->
+            </tr>
+    </tbody>
+</table>

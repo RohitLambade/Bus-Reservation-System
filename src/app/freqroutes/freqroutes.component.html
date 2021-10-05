@@ -1,0 +1,17 @@
+
+<table class="table table-bordered">
+    <thead>
+        <th>BUS ID</th><th>BUS NAME</th>  <th>SOURCE</th> <td>DESTINATION </td>
+    </thead>
+    <tbody>
+            <tr *ngFor="let b of busArray">
+                
+                    <td>{{b.busid}}</td>
+                    <td>{{b.busname}}</td>
+                    <td>{{b.source}}</td>
+                    <td>{{b.destination}}</td>           
+                
+
+            </tr>
+    </tbody>
+</table>

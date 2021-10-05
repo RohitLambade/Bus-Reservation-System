@@ -15,8 +15,18 @@ export class LoginComponent implements OnInit {
   member:Member|any;
   uname:any;
   pswd:any;
+  adminuname:any;
+  adminpswd:any;
   constructor(private commonservice : CommonServiceService, private router:Router) { }
 
+  checkAdmin(){
+    if(this.adminuname == "" && this.adminpswd ==""){
+      this.router.navigate(['login']);
+    }
+    if(this.adminuname == "Admin" && this.adminpswd == "Admin"){// retrive from backend.
+      this.router.navigate(['admindashboard']);
+    }
+  }
 
   checkLogin(){
     
@@ -64,6 +74,10 @@ export class LoginComponent implements OnInit {
   }
   ngOnInit(): void {
     
+  }
+  searchbuses(){
+    this.router.navigate(['busdetail']);
+
   }
 
 }

@@ -1,0 +1,21 @@
+
+<form>
+    Enter Userid <input type="text" name=ruserid [(ngModel)]=ruserid> 
+    <button (click)="resdetailsonclick()"> CHECK </button>
+</form>
+<hr>
+<table class="table table-bordered">
+    <thead>
+        <th>TRANS ID</th><th>CANCELLATION STATUS</th><th>DATE OF PAYMENT</th><th>BUSID</th> </thead>
+    <tbody>
+            <tr *ngFor="let t of transArray">
+                    <td>{{ t.trans_id}}</td>
+                    <td>{{ t.cancelled_status}}</td>
+                    <td>{{ t.dateOfBooking}}</td>
+                    <td>{{ t.bus_id.busid}}</td>
+                    <!--<td> <a [routerLink]="['/updatevehicle',v.vehicleNo]" class="btn btn-warning">Edit</a>
+                         <a href="#" class="btn btn-danger">Delete </a>
+                    </td>-->
+            </tr>
+    </tbody>
+</table>

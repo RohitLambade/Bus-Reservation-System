@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'; 
 import { ActivatedRoute } from '@angular/router';
 import { CommonServiceService } from '../common-service.service';
+import { Transaction } from '../transaction';
 @Component({
   selector: 'app-bookings',
   templateUrl: './bookings.component.html',
@@ -11,6 +12,8 @@ export class BookingsComponent implements OnInit {
   uname:any;
   id:any;
   TransArray:any;
+  PrintingDataAtStart = "Your Reciept";
+  PrintingDataAtEnd = " Thanks for Using our website !!!! ";
   constructor(private commonservice:CommonServiceService,private activeRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -18,7 +21,7 @@ export class BookingsComponent implements OnInit {
     this.commonservice.getSchedule(this.id).subscribe(
       (data)=>{
         console.log(data);
-        this.TransArray=data;
+        this.TransArray=data as Array <Transaction>;
         console.log(this.TransArray);
          },
          (error)=>

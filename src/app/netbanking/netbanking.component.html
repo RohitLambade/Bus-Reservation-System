@@ -1,0 +1,23 @@
+
+
+<h2 align="center">CHOOSE THE BANK </h2>
+<form #netform="ngForm"  (ngSubmit)="saveData(netform)">
+<table align="center">
+    <tr>
+<input type="radio" name="bank" value="AXIS" ngModel required> AXIS</tr>
+<tr>
+<input type="radio" name="bank" value="HDFC" ngModel required> HDFC</tr>
+<tr>
+<input type="radio" name="bank" value="SBI" ngModel required> SBI </tr>
+<tr>
+<input type="radio" name="bank" value="HSBC" ngModel required> HSBC </tr>
+<tr>
+<input type="radio" name="bank" value="ICICI" ngModel required>ICICI</tr>
+<tr>
+<td>Netbanking ID</td> <input type="text" value="Enter valid netbanking id" name="netid" ngModel required> </tr>
+<tr>
+<td>Name</td> <td><input type="text" value="Enter name" name="Name" ngModel required> </td></tr>
+<tr><td></td> <td><button type="submit"  [disabled]="netform.invalid" class="btn btn-outline-danger my-2 my-sm-0" >SUBMIT</button> </td> </tr>
+</table>
+</form>
+

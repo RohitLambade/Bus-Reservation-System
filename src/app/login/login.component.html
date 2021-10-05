@@ -1,11 +1,50 @@
-<p>login works!</p>
+
 <form #loginForm="ngForm" class="myform" (ngSubmit)=checkLogin() novalidate>
+    
 <div class="col-13">
-    <table align="center">
-    <tr><td>Login Username</td> <td><input type="text" name="uname" value="name" [(ngModel)]="uname"></td></tr>
-    <tr><td>Password </td><td><input type="password" name="pswd" value="pswd" [(ngModel)]="pswd"></td></tr>
-    <button class="btn btn-primary custom btn-success" type="submit"> Click Here to Login </button>
-    <tr><td><p><u><i>not a member?</i></u></p></td><td><button class="btn btn-primary custom btn-danger" (click)="goto()"> SIGN UP TO THE PORTAL </button></td> </tr>
+    <table border="1" align="center" bgcolor="#bee3e6">
+        <img src="..\assets\LeftBus.png" alt="">
+    <tr>
+        <td>Login Username</td> <td><input type="text" name="uname" value="name" [(ngModel)]="uname"></td>
+    </tr>
+    <tr>
+        <td>Password </td><td><input type="password" name="pswd" value="pswd" [(ngModel)]="pswd"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button class="btn btn-primary custom btn-success" type="submit"> Click Here to Login </button></td>
+    </tr>
+    
+    
+    
+    <tr>
+        <td><p><u><i>not a member?</i></u></p></td>
+        <td><button class="btn btn-primary custom btn-danger" (click)="goto()"> SIGN UP TO THE PORTAL </button></td> 
+    </tr>
     </table>
-    </div>
+</div>
+</form>
+<br>
+<p align="center">
+Click here to Search Buses 
+<button (click)="searchbuses()" class="btn btn-primary custom btn-success">
+    search buses
+  </button>
+</p>
+  <br><br>
+<form #AdminForm="ngForm" class="myform" (ngSubmit)=checkAdmin() novalidate>
+<div class="col-13">
+<table border="2" align="center" bgcolor="#bee3e6">
+    <tr>
+        <td>Admin Username</td> <td><input type="text" name="uname" value="name" [(ngModel)]="adminuname"></td>
+    </tr>
+    <tr>
+        <td>Admin Password </td><td><input type="password" name="pswd" value="pswd" [(ngModel)]="adminpswd"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button class="btn btn-primary custom btn-success" type="submit"> Click Here to Admin Login </button></td>
+    </tr>
+</table>
+</div>
 </form>
