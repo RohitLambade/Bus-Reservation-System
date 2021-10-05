@@ -1,6 +1,11 @@
-# BusReservation
+# BusReservation with Angular and SpringBoot
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
+
+## Angular Code
+SRC Folder map every detail about Front-End and maping with Backend
+
+## SpringBoot Code
 
 ## Development server
 
