@@ -3,9 +3,10 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
 
 ## Angular Code
-SRC Folder map every detail about Front-End and maping with Backend
+src Folder map every detail about Front-End and maping with Backend
 
 ## SpringBoot Code
+BusReservation/src will get you every code detail about Backend 
 
 ## Development server
 
